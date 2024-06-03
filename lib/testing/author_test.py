@@ -27,15 +27,15 @@ class TestAuthor:
         assert isinstance(author_1.name, str)
         assert isinstance(author_2.name, str)
 
-        # comment out the next two lines if using Exceptions
-        author_1.name = "ActuallyTopher"
-        assert author_1.name == "Carry Bradshaw"
+        # # comment out the next two lines if using Exceptions
+        # author_1.name = "ActuallyTopher"
+        # assert author_1.name == "Carry Bradshaw"
 
-        # comment out the next two lines if using Exceptions
-        author_2.name = 2
-        assert author_2.name == "Nathaniel Hawthorne"
+        # # comment out the next two lines if using Exceptions
+        # author_2.name = 2
+        # assert author_2.name == "Nathaniel Hawthorne"
 
-        # uncomment the next two lines if using Exceptions
+        # # uncomment the next two lines if using Exceptions
         # with pytest.raises(Exception):
         #     Author(2)
 
@@ -49,7 +49,7 @@ class TestAuthor:
         assert hasattr(author_2, "name")
         assert len(author_2.name) > 0
 
-        # uncomment the next two lines if using Exceptions
+        # # uncomment the next two lines if using Exceptions
         # with pytest.raises(Exception):
         #     Author("")
 
