@@ -201,9 +201,9 @@ class TestMagazine:
         assert author_1 in magazine_1.contributing_authors()
         assert author_2 not in magazine_1.contributing_authors()
         assert all(isinstance(author, Author) for author in magazine_1.contributing_authors())
-        # assert magazine_2.contributing_authors() is None
-        assert False is None
-    # def test_top_publisher(self):
+        assert magazine_2.contributing_authors() is None
+    
+    def test_top_publisher(self):
         """returns the magazine with the most articles"""
         Magazine.all = []
         Article.all = []
