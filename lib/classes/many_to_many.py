@@ -1,4 +1,5 @@
 from unicodedata import category
+import collections
 class Article:
     all = []
 
@@ -110,22 +111,21 @@ class Magazine:
             return None
         return [article.title for article in self._articles]
 
+   
     def contributing_authors(self):
-        from collections import Counter
-
-        author_count = Counter(article.author for article in self.articles)
+        Counter = {}
+        author_count = Counter(article.author for article in self.articles if isinstance(article.author, Author))
         contributing_authors = [author for author, count in author_count.items() if count > 2]
-
         return contributing_authors if contributing_authors else None
 
     @classmethod
     def top_publisher(cls):
-        max_articles = 0
-        top_magazine = None
+          Magazine.top_publisher() == None
+          max_articles = 0
 
-        for magazine in cls.top_publisher:
+          for magazine in cls.all:
             if len(magazine.articles) > max_articles:
                 max_articles = len(magazine.articles)
                 top_magazine = magazine
-
-        return top_magazine
+        
+          return top_magazine
